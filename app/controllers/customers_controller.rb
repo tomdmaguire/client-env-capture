@@ -37,9 +37,19 @@ class CustomersController < ApplicationController
   def create
     @customer = Customer.new(params[:customer])
 
+    RequestParser.parse request do |ip_address, agent, cookies|
+      @customer.ip_address = ip_address || 'Uknown'
+      @customer.browser =  agent.name || 'Uknown'
+      @customer_browser_version = agent.version || 'Uknown'
+      @customer.engine = agent.engine || 'Uknown'
+      @customer.engine_version = agent.engine_version || 'Uknown'
+      @customer.operating_system = agent.os || 'Uknown'
+      @customer.cookies = cookies || 'Uknown'
+    end
+
     respond_to do |format|
       if @customer.save
-        format.html { redirect_to cusomter_submitted_path }
+        format.html { redirect_to customer_submitted_path }
       else
         format.html { render action: "new" }
       end

@@ -35,7 +35,14 @@
 </p>
 <p>
   <strong><%= model_class.human_attribute_name(:cookies) %>:</strong><br>
-  <%= @customer.cookies %>
+  <ul>
+    <% @customer.cookies.split(';').each do |c| %>
+      <% k, v = c.split ':' %>
+      <li>
+        <span class="cookie_name"><%= k %></span><br/>
+        <span class="cookie_value"><%= v %></span>
+    <% end %>
+  </ul>
 </p>
 
 <div class="form-actions">
