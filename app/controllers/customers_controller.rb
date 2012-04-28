@@ -39,9 +39,9 @@ class CustomersController < ApplicationController
 
     respond_to do |format|
       if @customer.save
-        format.html { redirect_to customer_submitted_path }
+        format.html { redirect_to cusomter_submitted_path }
       else
-        format.html { redirect_to root_path }
+        format.html { render action: "new" }
       end
     end
   end
