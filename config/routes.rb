@@ -1,18 +1,15 @@
 CustomerEnv::Application.routes.draw do
-  match 'user/edit' => 'users#edit', :as => :edit_current_user
-
-  # Do not allow public sign ups
-  # match 'signup' => 'users#new', :as => :signup
-
-  match 'logout' => 'sessions#destroy', :as => :logout
-
-  match 'login' => 'sessions#new', :as => :login
-
-  root :to => "home#index"
+  root :to => "customers#new"
 
   resources :sessions
+  # match 'signup' => 'users#new', :as => :signup
+  match 'logout' => 'sessions#destroy', :as => :logout
+  match 'login' => 'sessions#new', :as => :login
 
   resources :users
+  match 'user/edit' => 'users#edit', :as => :edit_current_user
+
+  resources :customers
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

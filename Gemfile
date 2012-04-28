@@ -19,6 +19,7 @@ end
 
 gem "bcrypt-ruby", :require => "bcrypt"
 gem 'jquery-rails'
+gem 'user-agent'
 
 group :development do
   gem 'nifty-generators'
