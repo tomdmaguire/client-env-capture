@@ -38,13 +38,13 @@ class CustomersController < ApplicationController
     @customer = Customer.new(params[:customer])
 
     RequestParser.parse request do |ip_address, agent, cookies|
-      @customer.ip_address = ip_address || 'Uknown'
-      @customer.browser =  agent.name || 'Uknown'
-      @customer_browser_version = agent.version || 'Uknown'
-      @customer.engine = agent.engine || 'Uknown'
-      @customer.engine_version = agent.engine_version || 'Uknown'
-      @customer.operating_system = agent.os || 'Uknown'
-      @customer.cookies = cookies || 'Uknown'
+      @customer.ip_address        = ip_address
+      @customer.browser           = agent.name
+      @customer_browser_version   = agent.version
+      @customer.engine            = agent.engine
+      @customer.engine_version    = agent.engine_version
+      @customer.operating_system  = agent.os
+      @customer.cookies           = cookies
     end
 
     respond_to do |format|
