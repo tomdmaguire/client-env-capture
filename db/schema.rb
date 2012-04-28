@@ -11,16 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120428120733) do
+ActiveRecord::Schema.define(:version => 20120428123150) do
 
   create_table "customers", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
     t.string   "ip_address"
-    t.text     "user_agent"
-    t.text     "cookies"
+    t.string   "browser"
+    t.string   "browser_version"
+    t.string   "engine"
+    t.string   "engine_version"
+    t.string   "operating_system"
+    t.string   "cookies"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "users", :force => true do |t|

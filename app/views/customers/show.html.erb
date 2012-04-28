@@ -9,6 +9,34 @@
   <strong><%= model_class.human_attribute_name(:email) %>:</strong><br>
   <%= @customer.email %>
 </p>
+<p>
+  <strong><%= model_class.human_attribute_name(:ip_address) %>:</strong><br>
+  <%= @customer.ip_address %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:browser) %>:</strong><br>
+  <%= @customer.browser %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:browser_version) %>:</strong><br>
+  <%= @customer.browser_version %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:engine) %>:</strong><br>
+  <%= @customer.engine %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:engine_version) %>:</strong><br>
+  <%= @customer.engine_version %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:operating_system) %>:</strong><br>
+  <%= @customer.operating_system %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:cookies) %>:</strong><br>
+  <%= @customer.cookies %>
+</p>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),

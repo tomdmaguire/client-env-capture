@@ -1,4 +1,12 @@
 <%- model_class = @customer.class -%>
-<h1><%=t '.title', :default => t('helpers.titles.new', :model => model_class.model_name.human,
-                               :default => "New #{model_class.model_name.human}") %></h1>
+<p>
+    By submitting the below form, Music Glue will recieve information about environment to help us with your query. The data we collect is:
+</p>
+<ul>
+  <li>IP Address</li>
+  <li>Browser</li>
+  <li>Operating system</li>
+  <li>Cookies (Music Glue sites only)</li>
+</ul>
+
 <%= render :partial => 'form' %>

@@ -1,5 +1,6 @@
 <%= form_for @customer, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.error_messages %>
+  <%= render "shared/error_messages", :target => @customer %>
+
   <div class="control-group">
     <%= f.label :name, :class => 'control-label' %>
     <div class="controls">
@@ -14,6 +15,6 @@
   </div>
 
   <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= f.submit 'Submit information', :class => 'btn btn-primary' %>
   </div>
 <% end %>

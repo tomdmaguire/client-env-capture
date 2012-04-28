@@ -39,11 +39,9 @@ class CustomersController < ApplicationController
 
     respond_to do |format|
       if @customer.save
-        format.html { redirect_to @customer, notice: 'Customer was successfully created.' }
-        format.json { render json: @customer, status: :created, location: @customer }
+        format.html { redirect_to customer_submitted_path }
       else
-        format.html { render action: "new" }
-        format.json { render json: @customer.errors, status: :unprocessable_entity }
+        format.html { redirect_to root_path }
       end
     end
   end
@@ -58,5 +56,8 @@ class CustomersController < ApplicationController
       format.html { redirect_to customers_url }
       format.json { head :no_content }
     end
+  end
+
+  def submitted
   end
 end

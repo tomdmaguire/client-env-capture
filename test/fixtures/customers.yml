@@ -2,8 +2,22 @@
 
 one:
   name: MyString
-  email: test@test.com
+  email: MyString
+  ip_address: MyString
+  browser: MyString
+  browser_version: MyString
+  engine: MyString
+  engine_version: MyString
+  operating_system: MyString
+  cookies: MyString
 
 two:
   name: MyString
-  email: test@test.com
+  email: MyString
+  ip_address: MyString
+  browser: MyString
+  browser_version: MyString
+  engine: MyString
+  engine_version: MyString
+  operating_system: MyString
+  cookies: MyString
