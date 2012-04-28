@@ -10,7 +10,7 @@ class CustomersController < ApplicationController
     # /customers via post in create method
     redirect_to root_path and return unless current_user
 
-    @customers = Customer.all
+    @customers = Customer.find(:all, :order => "created_at DESC")
 
     respond_to do |format|
       format.html # index.html.erb
