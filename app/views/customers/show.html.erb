@@ -1,10 +1,6 @@
 <%- model_class = @customer.class -%>
-<h1><%=t '.title', :default => model_class.model_name.human %></h1>
+<h1><%= @customer.name %></h1>
 
-<p>
-  <strong><%= model_class.human_attribute_name(:name) %>:</strong><br>
-  <%= @customer.name %>
-</p>
 <p>
   <strong><%= model_class.human_attribute_name(:email) %>:</strong><br>
   <%= @customer.email %>

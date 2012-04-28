@@ -11,6 +11,7 @@ CustomerEnv::Application.routes.draw do
 
   resources :customers
   match 'submmited' => 'customers#submitted', :as => :customer_submitted
+  match 'customer_search' => 'customers#index', :as => :customer_search
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

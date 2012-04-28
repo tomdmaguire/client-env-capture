@@ -1,7 +1,15 @@
 class CustomersController < ApplicationController
+  include ControllerAuthentication
+
+  before_filter :login_required, :except => [:new, :create, :index, :submitted]
+
   # GET /customers
   # GET /customers.json
   def index
+    # manual authorisation to allow customers to reach
+    # /customers via post in create method
+    redirect_to root_path and return unless current_user
+
     @customers = Customer.all
 
     respond_to do |format|
@@ -27,7 +35,7 @@ class CustomersController < ApplicationController
     @customer = Customer.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html
       format.json { render json: @customer }
     end
   end
