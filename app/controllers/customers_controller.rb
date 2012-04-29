@@ -50,7 +50,7 @@ class CustomersController < ApplicationController
     RequestParser.parse request do |ip_address, agent, cookies, raw_request|
       @customer.ip_address        = ip_address
       @customer.browser           = agent.name
-      @customer_browser_version   = agent.version
+      @customer.browser_version   = agent.version
       @customer.engine            = agent.engine
       @customer.engine_version    = agent.engine_version
       @customer.operating_system  = agent.os
