@@ -4,7 +4,7 @@ require 'ostruct'
 class RequestParserTest < ActiveSupport::TestCase
   def request
     request = OpenStruct.new
-    request.env = { 'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.163 Safari/535.19', 'REMOTE_ADDR' => '127.0.0.1' }
+    request.env = { 'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.163 Safari/535.19', 'HTTP_X_FORWARDED_FOR' => '127.0.0.1' }
     request.cookies = { 'mg_basket' => '{"Foo":"Barr"}', 'mg_user_location' => '{"Faz":"Baz"}' }
     request
   end
