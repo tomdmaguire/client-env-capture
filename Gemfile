@@ -21,12 +21,12 @@ gem "bcrypt-ruby",                '~> 3.0.1', :require => "bcrypt"
 gem 'bootstrap-will_paginate',    '~> 0.0.7'
 gem 'jquery-rails',               '~> 2.0.2'
 gem 'therubyracer',               '~> 0.10.1'
+gem 'thin',                       '~> 1.3.1'
 gem 'user-agent',                 '~> 1.0.0'
 gem 'will_paginate',              '~> 3.0'
 
 group :development do
   gem 'nifty-generators'
-  gem 'thin'
 end
 
 # To use ActiveModel has_secure_password
