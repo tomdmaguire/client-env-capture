@@ -12,7 +12,7 @@ class RequestParserTest < ActiveSupport::TestCase
   def test_parse
     RequestParser.parse request do |ip_address, agent, cookies, raw_request|
       assert_equal ip_address, '127.0.0.1'
-      assert_equal agent.name.to_s, 'Chrome'
+      assert_equal agent.name.to_s, 'chrome'
       assert_equal agent.version, '18.0.1025.163'
       assert_equal agent.engine.to_s, 'webkit'
       assert_equal agent.os.to_s, 'OS X 10.6'
