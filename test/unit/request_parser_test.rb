@@ -10,7 +10,7 @@ class RequestParserTest < ActiveSupport::TestCase
   end
 
   def test_parse
-    RequestParser.parse request do |ip_address, agent, cookies|
+    RequestParser.parse request do |ip_address, agent, cookies, raw_request|
       assert_equal ip_address, '127.0.0.1'
       assert_equal agent.name.to_s, 'Chrome'
       assert_equal agent.version, '18.0.1025.163'
@@ -18,6 +18,7 @@ class RequestParserTest < ActiveSupport::TestCase
       assert_equal agent.os.to_s, 'OS X 10.6'
       assert_equal agent.engine_version, '535.19'
       assert_equal cookies, 'mg_basket: {"Foo":"Barr"}; mg_user_location: {"Faz":"Baz"}'
+      assert !raw_request.empty?
     end
   end
 end

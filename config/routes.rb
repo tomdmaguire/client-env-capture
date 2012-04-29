@@ -10,7 +10,7 @@ CustomerEnv::Application.routes.draw do
   match 'user/edit' => 'users#edit', :as => :edit_current_user
 
   resources :customers
-  match 'submmited' => 'customers#submitted', :as => :customer_submitted
+  match 'submitted' => 'customers#submitted', :as => :customer_submitted
   match 'customer_search' => 'customers#index', :as => :customer_search
 
   # The priority is based upon order of creation:

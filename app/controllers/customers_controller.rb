@@ -45,7 +45,7 @@ class CustomersController < ApplicationController
   def create
     @customer = Customer.new(params[:customer])
 
-    RequestParser.parse request do |ip_address, agent, cookies|
+    RequestParser.parse request do |ip_address, agent, cookies, raw_request|
       @customer.ip_address        = ip_address
       @customer.browser           = agent.name
       @customer_browser_version   = agent.version
@@ -53,6 +53,7 @@ class CustomersController < ApplicationController
       @customer.engine_version    = agent.engine_version
       @customer.operating_system  = agent.os
       @customer.cookies           = cookies
+      @customer.raw_request       = raw_request
     end
 
     respond_to do |format|

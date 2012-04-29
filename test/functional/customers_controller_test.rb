@@ -29,16 +29,6 @@ class CustomersControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get edit" do
-    get :edit, id: @customer
-    assert_response :success
-  end
-
-  test "should update customer" do
-    put :update, id: @customer, customer: { browser: @customer.browser, browser_version: @customer.browser_version, cookies: @customer.cookies, email: @customer.email, engine: @customer.engine, engine_version: @customer.engine_version, ip_address: @customer.ip_address, name: @customer.name, operating_system: @customer.operating_system }
-    assert_redirected_to customer_path(assigns(:customer))
-  end
-
   test "should destroy customer" do
     assert_difference('Customer.count', -1) do
       delete :destroy, id: @customer

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120428123150) do
+ActiveRecord::Schema.define(:version => 20120428184540) do
 
   create_table "customers", :force => true do |t|
     t.string   "name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20120428123150) do
     t.string   "cookies"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.text     "raw_request"
   end
 
   create_table "users", :force => true do |t|
