@@ -1,6 +1,7 @@
 GIT
   remote: https://github.com/yammer/user_agent.git
   revision: 2f4b0034f003a924af754e801f62168bbb010e47
+  ref: 2f4b003
   specs:
     user_agent (1.1.2)
 
