@@ -30,6 +30,8 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
+    bootstrap-will_paginate (0.0.7)
+      will_paginate
     builder (3.0.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -123,12 +125,14 @@ GEM
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
     user-agent (1.0.0)
+    will_paginate (3.0.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bcrypt-ruby
+  bootstrap-will_paginate
   coffee-rails (~> 3.2.1)
   jquery-rails
   mocha
@@ -141,3 +145,4 @@ DEPENDENCIES
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
   user-agent
+  will_paginate (= 3.0)

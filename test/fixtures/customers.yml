@@ -1,8 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  email: MyString
+  name: John Smith
+  email: johnsmith@example.com
   ip_address: MyString
   browser: MyString
   browser_version: MyString
@@ -10,10 +10,11 @@ one:
   engine_version: MyString
   operating_system: MyString
   cookies: MyString
+  raw_request: MyText
 
 two:
   name: MyString
-  email: MyString
+  email: email@address.com
   ip_address: MyString
   browser: MyString
   browser_version: MyString
@@ -21,3 +22,4 @@ two:
   engine_version: MyString
   operating_system: MyString
   cookies: MyString
+  raw_request: MyText

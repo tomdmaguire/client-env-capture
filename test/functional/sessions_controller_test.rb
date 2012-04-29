@@ -16,7 +16,7 @@ class SessionsControllerTest < ActionController::TestCase
   def test_create_valid
     User.stubs(:authenticate).returns(User.first)
     post :create
-    assert_redirected_to customers_path
+    assert_redirected_to customer_search_path
     assert_equal User.first.id, session['user_id']
   end
 end

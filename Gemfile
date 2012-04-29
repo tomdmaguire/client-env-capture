@@ -18,8 +18,10 @@ group :assets do
 end
 
 gem "bcrypt-ruby", :require => "bcrypt"
+gem 'bootstrap-will_paginate'
 gem 'jquery-rails'
 gem 'user-agent'
+gem 'will_paginate', '3.0'
 
 group :development do
   gem 'nifty-generators'

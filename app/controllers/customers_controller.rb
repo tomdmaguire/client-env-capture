@@ -1,3 +1,5 @@
+require 'will_paginate/array'
+
 class CustomersController < ApplicationController
   include ControllerAuthentication
 
@@ -10,7 +12,7 @@ class CustomersController < ApplicationController
     # /customers via post in create method
     redirect_to root_path and return unless current_user
 
-    @customers = Customer.find(:all, :order => "created_at DESC")
+    @customers = Customer.search(params[:search]).order("created_at DESC").paginate(:per_page => 10, :page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
