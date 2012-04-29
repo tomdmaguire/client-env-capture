@@ -68,6 +68,7 @@ GEM
     mocha (0.11.3)
       metaclass (~> 0.0.1)
     multi_json (1.3.2)
+    newrelic_rpm (3.2.0.1)
     nifty-generators (0.4.6)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -131,18 +132,19 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcrypt-ruby
-  bootstrap-will_paginate
+  bcrypt-ruby (~> 3.0.1)
+  bootstrap-will_paginate (~> 0.0.7)
   coffee-rails (~> 3.2.1)
-  jquery-rails
+  jquery-rails (~> 2.0.2)
   mocha
+  newrelic_rpm (~> 3.2.0)
   nifty-generators
   rails (= 3.2.3)
   sass-rails (~> 3.2.3)
-  sqlite3
-  therubyracer
+  sqlite3 (~> 1.3.6)
+  therubyracer (~> 0.10.1)
   thin
-  twitter-bootstrap-rails
+  twitter-bootstrap-rails (~> 2.0.6)
   uglifier (>= 1.0.3)
-  user-agent
-  will_paginate (= 3.0)
+  user-agent (~> 1.0.0)
+  will_paginate (~> 3.0)
